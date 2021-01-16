@@ -106,74 +106,60 @@ var retrieveStorage = function() {
 }
 retrieveStorage();
 
-// Check if the current time equals one of the hours in the planner
+// Check if the current time equals one of the hours in the planner using a function
+// Run switch statement to add a class with background colour to the text area elements
 var currentTime = function() {  
   var $timeSlice = $dateAndTime.slice(-5);
   var $time = $timeSlice.charAt(0) + $timeSlice.charAt(1);
   switch($time) {
+    case "01": case "02": case "03": case "04": case "05": case "06": case "07": case "08":
+      $("textarea").addClass("future");
+      break;
     case "09":
+      $(".text-box").not("#9am").addClass("future");
       $("#9am").addClass("present");
       break;
     case "10":
       $(".text-box").not("#10am").addClass("past")
       $("#10am").addClass("present");
+      $("#11am, #12pm, #1pm, #2pm, #3pm, #4pm, #5pm").addClass("future");
       break;
     case "11":
       $(".text-box").not("#11am").addClass("past")
       $("#11am").addClass("present");
+      $("#12pm, #1pm, #2pm, #3pm, #4pm, #5pm").addClass("future");
       break;
     case "12":
       $(".text-box").not("#12pm").addClass("past")
       $("#12pm").addClass("present");
+      $("#1pm, #2pm, #3pm, #4pm, #5pm").addClass("future");
       break;
     case "13":
       $(".text-box").not("#1pm").addClass("past")
       $("#1pm").addClass("present");
-      // $(".text-box").nextAll("text-box").addClass("future");
+      $("#2pm, #3pm, #4pm, #5pm").addClass("future");
       break;
     case "14":
       $(".text-box").not("#2pm").addClass("past")
       $("#2pm").addClass("present");
+      $("#3pm, #4pm, #5pm").addClass("future");
       break;
     case "15":
       $(".text-box").not("#3pm").addClass("past")
       $("#3pm").addClass("present");
+      $("#4pm, #5pm").addClass("future");
       break;
     case "16":
       $(".text-box").not("#4pm").addClass("past")
       $("#4pm").addClass("present");
+      $("#5pm").addClass("future");
       break;
     case "17":
       $(".text-box").not("#5pm").addClass("past");
       $("#5pm").addClass("present");
       break;
+    default:
+      $("textarea").addClass("past");
   }
 }
 currentTime();
-
-
-
-
-// var currentTime = function() {  
-//   var $time = $dateAndTime.slice(-5);
-//   if ($time.charAt(0) === '0' && $time.charAt(1) === '9') {
-//     $("#9am").css("background-color", "rgba(255, 0, 0, 0.6)");
-//   } else if ($time.charAt(0) === '1' && $time.charAt(1) === '0') {
-//     $("#10am").css("background-color", "rgba(255, 0, 0, 0.6)");
-//   } else if ($time.charAt(0) === '1' && $time.charAt(1) === '1') {
-//     $("#11am").css("background-color", "rgba(255, 0, 0, 0.6)");
-//   } else if ($time.charAt(0) === '1' && $time.charAt(1) === '2') {
-//     $("#12pm").css("background-color", "rgba(255, 0, 0, 0.6)");
-//   } else if ($time.charAt(0) === '1' && $time.charAt(1) === '3') {
-//     $("#1pm").css("background-color", "rgba(255, 0, 0, 0.6)");
-//   } else if ($time.charAt(0) === '1' && $time.charAt(1) === '4') {
-//     $("#2pm").css("background-color", "rgba(255, 0, 0, 0.6)");
-//   } else if ($time.charAt(0) === '1' && $time.charAt(1) === '5') {
-//     $("#3pm").css("background-color", "rgba(255, 0, 0, 0.6)");
-//   } else if ($time.charAt(0) === '1' && $time.charAt(1) === '6') {
-//     $("#4pm").css("background-color", "rgba(255, 0, 0, 0.6)");
-//   } else if ($time.charAt(0) === '2' && $time.charAt(1) === '2') {
-//     $("#5pm").css("background-color", "rgba(255, 0, 0, 0.6)");
-//   }
-// }
-// currentTime();
