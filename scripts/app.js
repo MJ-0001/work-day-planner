@@ -112,31 +112,40 @@ var currentTime = function() {
   var $time = $timeSlice.charAt(0) + $timeSlice.charAt(1);
   switch($time) {
     case "09":
-      $("#9am").css("background-color", "#BC243C");
+      $("#9am").addClass("present");
       break;
     case "10":
-      $("#10am").css("background-color", "#BC243C");
+      $(".text-box").not("#10am").addClass("past")
+      $("#10am").addClass("present");
       break;
     case "11":
-      $("#11am").css("background-color", "#BC243C");
+      $(".text-box").not("#11am").addClass("past")
+      $("#11am").addClass("present");
       break;
     case "12":
-      $("#12pm").css("background-color", "#BC243C");
+      $(".text-box").not("#12pm").addClass("past")
+      $("#12pm").addClass("present");
       break;
     case "13":
-      $("#1pm").css("background-color", "#BC243C");
+      $(".text-box").not("#1pm").addClass("past")
+      $("#1pm").addClass("present");
+      // $(".text-box").nextAll("text-box").addClass("future");
       break;
     case "14":
-      $("#2pm").css("background-color", "#BC243C");
+      $(".text-box").not("#2pm").addClass("past")
+      $("#2pm").addClass("present");
       break;
     case "15":
-      $("#3pm").css("background-color", "#BC243C");
+      $(".text-box").not("#3pm").addClass("past")
+      $("#3pm").addClass("present");
       break;
     case "16":
-      $("#4pm").css("background-color", "#BC243C");
+      $(".text-box").not("#4pm").addClass("past")
+      $("#4pm").addClass("present");
       break;
     case "17":
-      $("#5pm").css("background-color", "#BC243C");
+      $(".text-box").not("#5pm").addClass("past");
+      $("#5pm").addClass("present");
       break;
   }
 }
@@ -144,26 +153,27 @@ currentTime();
 
 
 
+
 // var currentTime = function() {  
 //   var $time = $dateAndTime.slice(-5);
 //   if ($time.charAt(0) === '0' && $time.charAt(1) === '9') {
-//     $("#9am").css("background-color", "#BC243C");
+//     $("#9am").css("background-color", "rgba(255, 0, 0, 0.6)");
 //   } else if ($time.charAt(0) === '1' && $time.charAt(1) === '0') {
-//     $("#10am").css("background-color", "#BC243C");
+//     $("#10am").css("background-color", "rgba(255, 0, 0, 0.6)");
 //   } else if ($time.charAt(0) === '1' && $time.charAt(1) === '1') {
-//     $("#11am").css("background-color", "#BC243C");
+//     $("#11am").css("background-color", "rgba(255, 0, 0, 0.6)");
 //   } else if ($time.charAt(0) === '1' && $time.charAt(1) === '2') {
-//     $("#12pm").css("background-color", "#BC243C");
+//     $("#12pm").css("background-color", "rgba(255, 0, 0, 0.6)");
 //   } else if ($time.charAt(0) === '1' && $time.charAt(1) === '3') {
-//     $("#1pm").css("background-color", "#BC243C");
+//     $("#1pm").css("background-color", "rgba(255, 0, 0, 0.6)");
 //   } else if ($time.charAt(0) === '1' && $time.charAt(1) === '4') {
-//     $("#2pm").css("background-color", "#BC243C");
+//     $("#2pm").css("background-color", "rgba(255, 0, 0, 0.6)");
 //   } else if ($time.charAt(0) === '1' && $time.charAt(1) === '5') {
-//     $("#3pm").css("background-color", "#BC243C");
+//     $("#3pm").css("background-color", "rgba(255, 0, 0, 0.6)");
 //   } else if ($time.charAt(0) === '1' && $time.charAt(1) === '6') {
-//     $("#4pm").css("background-color", "#BC243C");
+//     $("#4pm").css("background-color", "rgba(255, 0, 0, 0.6)");
 //   } else if ($time.charAt(0) === '2' && $time.charAt(1) === '2') {
-//     $("#5pm").css("background-color", "#BC243C");
+//     $("#5pm").css("background-color", "rgba(255, 0, 0, 0.6)");
 //   }
 // }
 // currentTime();
