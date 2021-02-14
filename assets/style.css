@@ -1,8 +1,39 @@
+/* Additional fine tuning for jumbotron */
+.jumbotron {
+  text-align: center;
+  background-color: transparent;
+  color: rgb(158, 30, 30);
+  border-radius: 0;
+  border-bottom: 10px solid rgb(158, 30, 30);;
+}
+
+/* Styling for all body text */
 body {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   line-height: 1;
   background: rgb(99, 160, 184);
+}
+
+/* Styling for text boxes */
+.time-block {
+  text-align: center;
+  border-radius: 15px;
+}
+
+.hour {
+  background-color: #ffffff;
+  color: #000000;
+  border-top: 1px dashed #000000;
+}
+
+.hour-div {
+  text-align: center;
+  margin: auto;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 100%;
+  font-weight: bold;
+  color: rgb(158, 30, 30);
 }
 
 .text-box {
@@ -15,38 +46,12 @@ body {
   padding: 10px;
 }
 
-#last-row {
-  border-bottom: 3px solid green;
-}
-
-.jumbotron {
-  text-align: center;
-  background-color: transparent;
-  color: rgb(158, 30, 30);
-  border-radius: 0;
-  border-bottom: 10px solid rgb(158, 30, 30);;
-}
-
-.container {
-  padding-bottom: 50px;
-}
-
 .description {
   white-space: pre-wrap;
 }
 
-.time-block {
-  text-align: center;
-  border-radius: 15px;
-}
-
-.hour-div {
-  text-align: center;
-  margin: auto;
-  font-family:'Courier New', Courier, monospace;
-  font-size: 100%;
-  font-weight: bold;
-  color: rgb(158, 30, 30);
+#last-row {
+  border-bottom: 3px solid green;
 }
 
 .row {
@@ -55,12 +60,11 @@ body {
   border-top: 3px solid green;
 }
 
-.hour {
-  background-color: #ffffff;
-  color: #000000;
-  border-top: 1px dashed #000000;
+.container {
+  padding-bottom: 50px;
 }
 
+/* Colour changes to reflect system time */
 .past {
   background-color: #d3d3d3;
   color: black;
@@ -76,6 +80,7 @@ body {
   color: black;
 }
 
+/* Styling for save button */
 .saveBtn {
   background-color: #3d66d8;
   border:1px solid grey;
@@ -94,6 +99,7 @@ body {
   justify-content: center;
 }
 
+/* Effects for style button mouse over */
 .saveBtn:hover {
   background-color: rgb(158, 30, 30);
 }
